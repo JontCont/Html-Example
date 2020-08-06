@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0px;
+    font-family: 'Hind', sans-serif;
+
+}
+.section{
+    background: #837a7a;
+    padding:80px 0;
+}
+.width{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+.section h1{
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.pics{
+    padding: 40px 0;
+}
+.pics img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    transition: .3s;
+    cursor: pointer;
+}
+.pics img:hover{
+    filter:none;
+}
+.contents{
+    max-width: 600px;
+    margin: auto;
+}
+.testmonial{
+    display: none;
+}
+.testmonial.active{
+    display: block;
+} 
+.testmonial p{
+    color:#5c5c5c;
+    margin-bottom:20px ;
+}
+.testmonial .description{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+}
