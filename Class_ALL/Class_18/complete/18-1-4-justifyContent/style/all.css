@@ -1,0 +1,16 @@
+@charset "utf-8";
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box__item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border: solid 1px #ccc;
+}

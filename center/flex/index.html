@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width Center</title>
+    <style>
+        *,*::after,*::before
+        {
+
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            position: relative;
+            height: 100vh;
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            position: relative;
+            height: 200px;
+            width: 200px;
+
+            background-color: plum;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
