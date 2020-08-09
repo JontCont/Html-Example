@@ -17,6 +17,12 @@ body{
     font-size:30px;
     color : #ffffff;
 }
+.content_center{
+    position: relative; /* 絕對 */
+    justify-self: center;
+    align-self: center;
+}
+
 /* Layout */
 .wrap{}
 .btn_home{
@@ -34,19 +40,17 @@ body{
     width: 100%;
     height: 100vh;
 }
+.head__inner{
+    position: relative;
+    display: grid;
+}
 .head_video{
     z-index: -1;
     opacity: .8;
     object-fit:cover;
+    position: absolute;
 }
 
-.head__item{
-    position: absolute; /* 絕對 */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1;
-}
 .nav__inner{
     background-color: rgb(73, 66, 58);
     height: 50px;
@@ -78,12 +82,54 @@ body{
 }
 .nav_menu >li a{
     color: #fff;
-    margin-left: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-decoration: none;
 }
 .search,.nav_menu{top: 15px;}
 .search{
     color: #fff;
-    right: 10px;
+    right: 20px;
     position: absolute;
+}
+.search > i{
+    margin-right: 5px;
+}
+
+.card_inner{
+    position: relative;
+    height: 50vh;
+    background-color: antiquewhite;
+    display: grid;
+}
+.card_item{
+    position: relative;
+    font-size: 40px;
+}
+.card_content>a {
+    display: inline-block;
+    color:black;
+    text-decoration: none;
+}
+.card_content>a i{
+    clip-path: circle(50% at 50% 50%);
+    color: rgb(95, 84, 84);
+    align-content: center;
+    justify-content: center;
+    font-size: 100px;
+    display: grid;
+}
+
+.card_content{
+    display: inline-block;
+    margin-left:100px ;
+    margin-right:100px ;
+}
+
+.news_inner{
+    position: relative;
+}
+.new_card{
+    width: 300px;
+    height: 400px;
 }
