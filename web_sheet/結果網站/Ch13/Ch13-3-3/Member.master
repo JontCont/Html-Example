@@ -1,0 +1,57 @@
+﻿<%@ Master Language="VB" CodeFile="Member.master.vb" Inherits="Member" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .style1
+        {
+            width: 57%;
+            height: 76px;
+        }
+        .style2
+        {
+            height: 48px;
+        }
+        .style4
+        {
+            height: 30px;
+            width: 200px;
+        }
+        .style3
+        {
+            height: 30px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="style1">
+                <tr>
+                    <td class="style2" colspan="2">
+                        <asp:Label ID="Label1" runat="server" BackColor="#3366FF" BorderStyle="None" Font-Names="微軟正黑體" Font-Size="XX-Large" ForeColor="White" Height="41px" Text="MyMember會員網站" Width="515px"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#99CCFF" class="style4">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#99CCFF" DataSourceID="SiteMapDataSource1" StaticDisplayLevels="2">
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    </td>
+                    <td class="style3">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

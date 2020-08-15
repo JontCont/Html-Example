@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+    $("input").click(function(){
+        $.getJSON("test1.asp",function(data){	//使用getJSON()方法傳送請求並接收JSON格式資料
+                var data  = data;	//取得響應資料
+                var str = "<table border=1 width=100%>";	//定義字串臨時變數
+                str += "<tr>";
+                for(var name in data[0]){	//檢查響應資料中的第一個陣列元素物件
+                    str += "<th>" + name + "</th>";	//取得並顯示元素物件的屬性名
+                }
+                str += "</tr>";    
+                for(var i=0; i<data.length; i++){	//檢查響應資料中陣列元素
+                    str += "<tr>";
+                    for(var name in data[i]){ 	//檢查陣列元素中的每個屬性成員
+                        str += "<td>" + data[i][name]  + "</td>";	//取得並顯示元素物件的屬性值
+                    }
+                    str += "</tr>";
+                }
+                str += "<table>";
+                $("div").html(str); 	//把臨時字串以HTML格式內嵌到div元素中顯示
+        });
+    });
+})
+
+
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<input type="button" value="向伺服器發出異步請求" />
+<div></div>
+</body>
+</html>

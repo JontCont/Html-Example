@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{01D7372E-5C3D-4ACC-AE33-8397A5988FE5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Delight.mdf" />
+    <Content Include="App_Data\Delight_log.ldf">
+      <DependentUpon>Delight.mdf</DependentUpon>
+    </Content>
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\github.png" />
+    <Content Include="images\JUMP_FORCE.jpg" />
+    <Content Include="images\login_back.jpg" />
+    <Content Include="images\logo_01.jpg" />
+    <Content Include="images\overcooked_gamer.jpg" />
+    <Content Include="images\showcase.jpg" />
+    <Content Include="images\user.png" />
+    <Content Include="images\World War Z.jpg" />
+    <Content Include="images\素材.jpg" />
+    <Content Include="Index_meun\Customer Service\style\PrivacyStyle.css" />
+    <Content Include="Index_meun\Customer Service\Privacy_Policy.aspx" />
+    <Content Include="Index_meun\style_data\Customer_Service_Style.css" />
+    <Content Include="Index_meun\style_data\Sign_in_Style.css" />
+    <Content Include="Index_meun\style_data\Style_header_footer.css" />
+    <Content Include="Index_meun\style_data\WebStore_Style.css" />
+    <Content Include="Index_meun\style_data\Web_about_Style.css" />
+    <Content Include="Index_meun\style_data\Web_Community_Style.css" />
+    <Content Include="Index_meun\style_data\Web_Store.css" />
+    <Content Include="Index_meun\WebSign_in.aspx" />
+    <Content Include="Index_meun\Web_about.aspx" />
+    <Content Include="Index_meun\Web_buyStore.aspx" />
+    <Content Include="Index_meun\Web_Community.aspx" />
+    <Content Include="Index_meun\Web_Customer_Service.aspx" />
+    <Content Include="Index_meun\Web_news.aspx" />
+    <Content Include="Index_meun\Web_register.aspx" />
+    <Content Include="store_data\Store2.aspx" />
+    <Content Include="store_data\Store3.aspx" />
+    <Content Include="store_data\Store4.aspx" />
+    <Content Include="store_data\Store5.aspx" />
+    <Content Include="store_data\Store6.aspx" />
+    <Content Include="store_data\Store7.aspx" />
+    <Content Include="store_data\Store8.aspx" />
+    <Content Include="store_data\Store9.aspx" />
+    <Content Include="store_data\Store_1.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Index_meun\WebStore.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Index_meun\Customer Service\Privacy_Policy.aspx.designer.vb">
+      <DependentUpon>Privacy_Policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Customer Service\Privacy_Policy.aspx.vb">
+      <DependentUpon>Privacy_Policy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\WebSign_in.aspx.designer.vb">
+      <DependentUpon>WebSign_in.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\WebSign_in.aspx.vb">
+      <DependentUpon>WebSign_in.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_about.aspx.designer.vb">
+      <DependentUpon>Web_about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_about.aspx.vb">
+      <DependentUpon>Web_about.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_buyStore.aspx.designer.vb">
+      <DependentUpon>Web_buyStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_buyStore.aspx.vb">
+      <DependentUpon>Web_buyStore.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_Community.aspx.designer.vb">
+      <DependentUpon>Web_Community.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_Community.aspx.vb">
+      <DependentUpon>Web_Community.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_Customer_Service.aspx.designer.vb">
+      <DependentUpon>Web_Customer_Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_Customer_Service.aspx.vb">
+      <DependentUpon>Web_Customer_Service.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_news.aspx.designer.vb">
+      <DependentUpon>Web_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_news.aspx.vb">
+      <DependentUpon>Web_news.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index_meun\Web_register.aspx.designer.vb">
+      <DependentUpon>Web_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\Web_register.aspx.vb">
+      <DependentUpon>Web_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Index_meun\WebStore.aspx.designer.vb">
+      <DependentUpon>WebStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_meun\WebStore.aspx.vb">
+      <DependentUpon>WebStore.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store2.aspx.designer.vb">
+      <DependentUpon>Store2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store2.aspx.vb">
+      <DependentUpon>Store2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store3.aspx.designer.vb">
+      <DependentUpon>Store3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store3.aspx.vb">
+      <DependentUpon>Store3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store4.aspx.designer.vb">
+      <DependentUpon>Store4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store4.aspx.vb">
+      <DependentUpon>Store4.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store5.aspx.designer.vb">
+      <DependentUpon>Store5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store5.aspx.vb">
+      <DependentUpon>Store5.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store6.aspx.designer.vb">
+      <DependentUpon>Store6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store6.aspx.vb">
+      <DependentUpon>Store6.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store7.aspx.designer.vb">
+      <DependentUpon>Store7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store7.aspx.vb">
+      <DependentUpon>Store7.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store8.aspx.designer.vb">
+      <DependentUpon>Store8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store8.aspx.vb">
+      <DependentUpon>Store8.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store9.aspx.designer.vb">
+      <DependentUpon>Store9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store9.aspx.vb">
+      <DependentUpon>Store9.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="store_data\Store_1.aspx.designer.vb">
+      <DependentUpon>Store_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_data\Store_1.aspx.vb">
+      <DependentUpon>Store_1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52057/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

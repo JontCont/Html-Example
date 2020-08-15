@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SchoolModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SchoolModelStoreContainer">
+          <EntitySet Name="Classes" EntityType="SchoolModel.Store.Classes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Courses" EntityType="SchoolModel.Store.Courses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Instructors" EntityType="SchoolModel.Store.Instructors" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Students" EntityType="SchoolModel.Store.Students" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Classes__c_no__2A4B4B5E" Association="SchoolModel.Store.FK__Classes__c_no__2A4B4B5E">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes__eid__286302EC" Association="SchoolModel.Store.FK__Classes__eid__286302EC">
+            <End Role="Instructors" EntitySet="Instructors" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes__sid__5AEE82B9" Association="SchoolModel.Store.FK__Classes__sid__5AEE82B9">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Classes">
+          <Key>
+            <PropertyRef Name="eid" />
+            <PropertyRef Name="sid" />
+            <PropertyRef Name="c_no" />
+          </Key>
+          <Property Name="eid" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="sid" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="c_no" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="time" Type="datetime" />
+          <Property Name="room" Type="varchar" MaxLength="8" />
+          <Property Name="grade" Type="float" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="c_no" />
+          </Key>
+          <Property Name="c_no" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="credits" Type="int" />
+        </EntityType>
+        <EntityType Name="Instructors">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="rank" Type="varchar" MaxLength="10" />
+          <Property Name="department" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="name" Type="varchar" MaxLength="12" />
+          <Property Name="major" Type="varchar" MaxLength="20" />
+          <Property Name="tel" Type="varchar" MaxLength="15" />
+          <Property Name="birthday" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__Classes__c_no__2A4B4B5E">
+          <End Role="Courses" Type="SchoolModel.Store.Courses" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Store.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="c_no" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="c_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes__eid__286302EC">
+          <End Role="Instructors" Type="SchoolModel.Store.Instructors" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Store.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructors">
+              <PropertyRef Name="eid" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="eid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes__sid__5AEE82B9">
+          <End Role="Students" Type="SchoolModel.Store.Students" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Store.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SchoolModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SchoolEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Classes" EntityType="SchoolModel.Classes" />
+          <EntitySet Name="Courses" EntityType="SchoolModel.Courses" />
+          <EntitySet Name="Instructors" EntityType="SchoolModel.Instructors" />
+          <EntitySet Name="Students" EntityType="SchoolModel.Students" />
+          <AssociationSet Name="FK__Classes__c_no__2A4B4B5E" Association="SchoolModel.FK__Classes__c_no__2A4B4B5E">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes__eid__286302EC" Association="SchoolModel.FK__Classes__eid__286302EC">
+            <End Role="Instructors" EntitySet="Instructors" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Classes__sid__5AEE82B9" Association="SchoolModel.FK__Classes__sid__5AEE82B9">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Classes" EntitySet="Classes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Classes">
+          <Key>
+            <PropertyRef Name="eid" />
+            <PropertyRef Name="sid" />
+            <PropertyRef Name="c_no" />
+          </Key>
+          <Property Name="eid" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="sid" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="c_no" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="time" Type="DateTime" Precision="3" />
+          <Property Name="room" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="grade" Type="Double" />
+          <NavigationProperty Name="Courses" Relationship="SchoolModel.FK__Classes__c_no__2A4B4B5E" FromRole="Classes" ToRole="Courses" />
+          <NavigationProperty Name="Instructors" Relationship="SchoolModel.FK__Classes__eid__286302EC" FromRole="Classes" ToRole="Instructors" />
+          <NavigationProperty Name="Students" Relationship="SchoolModel.FK__Classes__sid__5AEE82B9" FromRole="Classes" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="c_no" />
+          </Key>
+          <Property Name="c_no" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="credits" Type="Int32" />
+          <NavigationProperty Name="Classes" Relationship="SchoolModel.FK__Classes__c_no__2A4B4B5E" FromRole="Courses" ToRole="Classes" />
+        </EntityType>
+        <EntityType Name="Instructors">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="rank" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="department" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Classes" Relationship="SchoolModel.FK__Classes__eid__286302EC" FromRole="Instructors" ToRole="Classes" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="name" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="major" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="tel" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="birthday" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Classes" Relationship="SchoolModel.FK__Classes__sid__5AEE82B9" FromRole="Students" ToRole="Classes" />
+        </EntityType>
+        <Association Name="FK__Classes__c_no__2A4B4B5E">
+          <End Role="Courses" Type="SchoolModel.Courses" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="c_no" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="c_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes__eid__286302EC">
+          <End Role="Instructors" Type="SchoolModel.Instructors" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructors">
+              <PropertyRef Name="eid" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="eid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Classes__sid__5AEE82B9">
+          <End Role="Students" Type="SchoolModel.Students" Multiplicity="1" />
+          <End Role="Classes" Type="SchoolModel.Classes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="Classes">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SchoolModelStoreContainer" CdmEntityContainer="SchoolEntities">
+          <EntitySetMapping Name="Classes">
+            <EntityTypeMapping TypeName="SchoolModel.Classes">
+              <MappingFragment StoreEntitySet="Classes">
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="c_no" ColumnName="c_no" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="room" ColumnName="room" />
+                <ScalarProperty Name="grade" ColumnName="grade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="SchoolModel.Courses">
+              <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="c_no" ColumnName="c_no" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="credits" ColumnName="credits" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instructors">
+            <EntityTypeMapping TypeName="SchoolModel.Instructors">
+              <MappingFragment StoreEntitySet="Instructors">
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="department" ColumnName="department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="SchoolModel.Students">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="major" ColumnName="major" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

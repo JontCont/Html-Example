@@ -1,0 +1,20 @@
+﻿.lblStyle
+{
+   font-size: large;
+   color: #99FFCC;
+   background-color: #000000;
+   border-style: outset;
+}
+.btnStyle
+{
+   font-size: large;
+   background-color: #800000;
+   color: #FFFFFF;
+   font-weight: bold;
+}
+.gridStyle {
+    color: #000000;
+    font-weight: bold;
+    background-color: #C0C0C0;
+    border: 3px solid #FF0000;
+}

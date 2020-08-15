@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="首頁">
+    <siteMapNode url="~/Mp3.aspx" title="MP3播放機">
+      <siteMapNode url="~/iPodClass.aspx" title="iPod Class"/>
+      <siteMapNode url="~/iPodNano.aspx" title="iPod Nano"/>
+      <siteMapNode url="~/iPodShuffle.aspx" title="iPod Shuffle"/>
+    </siteMapNode>
+    <siteMapNode url="~/Computers.aspx" title="電腦">
+      <siteMapNode url="~/Desktop.aspx" title="桌上型"/>
+      <siteMapNode url="~/Notebook.aspx" title="筆記型"/>
+      <siteMapNode url="~/Pad.aspx" title="平板電腦"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

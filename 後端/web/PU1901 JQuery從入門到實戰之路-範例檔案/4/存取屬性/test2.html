@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+	$("img").each(function(){
+		$(this).after("<p>" + $(this).attr("title") + "</p>");
+	})
+})
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<img src="images/icon (15).png" title="Facebook是一個社交網路服務網站，於2004年2月4日上線。"  />
+<img src="images/icon (3).png" title="Apple是美國蘋果公司，核心業務是電子科技產品，知名產品內含Apple II、Macintosh電腦、iPod音樂播放器、iTunes商店、iPhone手機和iPad平板電腦等。"  />
+<img src="images/icon (19).png" title="Google是一家美國網際網路搜尋引擎公司，於1998年9月7日以私有股份公司的形式創立。"  />
+</body>
+</html>

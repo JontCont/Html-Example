@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" >
+window.onload = function(){
+    var btn = document.getElementsByTagName("input")[0];
+    var p = document.getElementsByTagName("p")[0];
+    var i = 1;
+    do{
+        if(btn.addEventListener)	//若果支援addEventListener()方法，則呼叫該方法
+            btn.addEventListener("click", function(){
+                p.innerHTML += "<br />("  + i++ + ")  "  + this.nodeName;
+                this.removeEventListener("click",arguments.callee,false);	
+            },false);
+        else{	//否則，呼叫attachEvent()方法在IE下登錄事件
+            btn.attachEvent("onclick", (function(btn){
+                return function(){	//傳回閉包函數，進一步動態鎖定響應事件的目前物件
+                    p.innerHTML += "<br />("  + i++ + ")  "  + btn.nodeName;
+                    btn.detachEvent("onclick", arguments.callee); 	//登出IE事件
+                }
+            })(btn)); 	//直接呼叫函數，以便向內定傳遞目前綁定元素物件
+        }
+        btn = btn.parentNode;
+    } while(btn);
+}
+
+
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<input type="button" value="Event物件" />
+<p>事件流傳播過程：</p>
+
+</body>
+</html>

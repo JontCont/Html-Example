@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+    var $body = $("body");	//取得body元素
+    var li = $body.children().eq(2).children()[0];		//利用children()方法，檢查到第一個li元素
+    $(li).text("第1項").next().text("第2項").next().text("第3項");		//利用next()方法，檢查li元素，並修改每個li元素的文字內容
+})
+
+
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<h1>DOM</h1>
+<p>DOM實際上是以面對物件模式描述的文件模型。DOM定義了表示和修改文件所需的物件、這些物件的行為和屬性，以及這些物件之間的關系。可以把DOM瞭解為是頁面上資料和結構的一個樹狀表示，不過頁面當然並不是以這種樹的模式實際實現。根據W3C DOM規範，DOM是HTML與XML的套用寫程式接口（API），DOM將整個頁面映射為一個由階層節點群組成的檔案。內含1級、2級、3級共3個等級。</p>
+<ul>
+    <li>1級DOM在1998年10月份成為W3C的提議，由DOM核心與DOM HTML兩個模組群組成。DOM核心能映射以XML為基礎的文件結構，容許取得和動作文件的任意部分。DOM HTML透過加入HTML私人的物件與函數對DOM核心進行了延伸。 </li>
+    <li>2級DOM透過物件接口增加了對滑鼠和使用者界面事件（DHTML長期支援滑鼠與使用者界面事件）、範圍、檢查（重復執行DOM文件）和層疊型態表（CSS）的支援。同時也對DOM 1的核心進行了延伸，進一步可支援XML命名空間。 2級DOM引進了幾個新DOM模組來處理新的接口型態：DOM檢視，描述追蹤一個文件的各種檢視（使用CSS型態設計文件前後）的接口；DOM事件，描述事件接口；DOM型態，描述處理基於CSS型態的接口；DOM檢查與範圍，描述檢查和動作文件樹的接口； </li>
+    <li>3級DOM透過引入統一模式載入和儲存文件和文件驗證方法對DOM進行進一步延伸，DOM3包括一個名為"DOM載入與儲存"的新模組，DOM核心延伸後可支援XML1.0的所有內容，包擴XML Infoset、 XPath和XML Base。 </li>
+</ul>
+</body>
+</html>

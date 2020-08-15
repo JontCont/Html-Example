@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="big5"?>
+<!--網頁製作徹底研究系列-->
+<booklist>
+  <book>
+      <id>F1234</id>
+      <title>ASP.NET網頁製作徹底研究</title>
+      <authorlist>
+         <author>陳會安</author>
+      </authorlist>
+      <price>650</price>
+  </book>
+  <book>
+      <id>F5678</id>
+      <title>XML網頁製作徹底研究</title>
+      <authorlist>
+         <author>陳會安</author>
+      </authorlist>
+      <price>650</price>
+  </book>
+</booklist>

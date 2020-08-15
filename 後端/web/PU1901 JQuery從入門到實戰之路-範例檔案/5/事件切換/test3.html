@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+    $("div").hover(	//綁定hover()合成事件
+        function(event){ 	//登錄mouseover事件處理函數
+            $("p").append(event.type + "<br />");
+        },
+        function(event){ 	//登錄mouseout事件處理函數
+            $("p").append(event.type + "<br />");
+        }
+    )
+})
+
+</script>
+<style type="text/css">
+div { width:300px; height:180px; background:red; padding:20px; }
+span { float:right; width:120px; height:80px; background:blue; color:white; font-weight:bold; }
+</style>
+<title>上機練習</title>
+</head>
+<body>
+<div>
+    <span></span>
+</div>
+<p></p>
+</body>
+</html>

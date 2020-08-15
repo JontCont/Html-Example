@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/ xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+    $("#test :text").val("文字標籤");
+    $("#test :password").val("密碼域");
+    $("#test :checkbox").val("核取按鈕").css("border","solid 1px red");
+    $("#test :radio").val("選項按鈕").css("border","solid 1px blue");    
+    $("#test :image").val("影像域").css("border","solid 1px green");    
+    $("#test :file").val("檔案域").css("border","solid 1px pink");
+    $("#test :hidden").val("隱藏欄位");
+    $("#test :button").val("普通按鈕");
+    $("#test :submit").val("傳送按鈕");
+    $("#test :reset").val("重新開機按鈕");
+})
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<form id="test" action="" method="get">
+    <input name="" type="text" value=""><br />
+    <input name="" type="password" value=""><br />
+    <input name="" type="checkbox" value="核取按鈕"><br />
+    <input name="" type="radio" value="選項按鈕"><br />
+    <input name="" type="image" value="" src="images/btn.gif"S><br />
+    <input name="" type="file" value=""><br />
+    <input name="" type="hidden" value=""><br />
+    <input name="" type="button" value=""><br />
+    <input name="" type="submit" value=""><br />
+    <input name="" type="reset" value=""><br />
+</form>
+</body>
+</html>

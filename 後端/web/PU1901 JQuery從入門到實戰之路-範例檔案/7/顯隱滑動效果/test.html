@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$( function(){
+	$("button").click(function () {
+		$(this).parent().slideUp("slow", function () {
+		  	$("#msg").text($("button", this).text() + "已經實現。");
+		});
+	});
+
+});
+
+</script>
+<style type="text/css">
+div { margin:2px; }
+</style>
+<title>上機練習</title>
+</head>
+<body>
+<div>
+    <button>隱藏文字框1</button>
+    <input type="text" value="文字框1" />
+</div>
+<div>
+    <button>隱藏文字框2</button>
+    <input type="text" value="文字框2" />
+</div>
+<div>
+    <button>隱藏文字框3</button>
+    <input type="text" value="文字框3" />
+</div>
+<div id="msg"></div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+// JavaScript共用區
+//20160921 by kevin
+
+	var winHeight    = $(window).height();          //螢幕高度
+	var win_W		 = $(window).width();			//螢幕寬度
+	var hederHeight  = $(".header").innerHeight();;	//版頭高度
+	var footerHeight = $(".footer").innerHeight();;	//版腳高度
+
+	//浮動式top鍵
+	$(window).load(function(){
+		$(window).bind('scroll resize', function(){
+			var $this = $(this);
+			var $this_Top=$this.scrollTop();
+			
+			//當高度小於100時，關閉區塊 
+			if($this_Top < 100){
+				$('.top_but').stop().animate({bottom:"-70px"});
+			}
+			if($this_Top > 100){
+				$('.top_but').stop().animate({bottom:"133px"});
+			}
+		}).scroll();
+	});
+	
+	//錨點平滑滾動效果
+	$(function(){
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					},
+					1000);
+					return false;
+				}
+			}
+		});
+	});
+	
+	//----------------------------------將主體添加最小高度 讓footer置底----------------------------------
+	function mainH() {
+		winHeight    = $(window).height();
+		hederHeight  = $(".header").innerHeight();
+		footerHeight = $(".footer").innerHeight();
+		
+		$(".main").css({
+			'min-height': winHeight-hederHeight-footerHeight-0+'px'		//"-30"這要隨每個案子不同調整
+		})
+	}
+	
+	mainH();
+	
+	setTimeout(function(){
+		mainH();
+	},300)
+	
+	$(window).resize(function(e) {
+		setTimeout(function(){
+			mainH();
+		},300)
+	});
+	
+	//----------------------------------主按鍵收合 for無障礙網站----------------------------------
+	/*$(function(){
+		$(".nav").focusin(function(e) {
+			$(this).siblings(".nav").children(".navOpen").removeClass("active");
+            $(this).children(".navOpen").addClass("active");
+			e.stopPropagation();
+        });
+		$(".navOpen").click(function(e) {
+            //e.stopPropagation();
+        });
+		$(".main").focusin(function(e) {
+            $(".navOpen").removeClass("active");
+        });
+		$(window).click(function(e) {
+            $(".navOpen").removeClass("active");
+        });
+	});*/
+	
+	//----------------------------------左選單收合----------------------------------
+	$(function(){
+		$(".leftList").children("a").click(function(e) {
+			$(".leftList").children("a").not(this).siblings(".leftList_Open").slideUp();
+            $(this).siblings(".leftList_Open").slideToggle();
+        });
+	});
+	
+	
+	//----------------------------------手機版左選單收合----------------------------------
+	$(function(){
+		$(".inTit.has_show").click(function(e) {
+			var win_W			= $(window).width();			//螢幕寬度
+			if ( win_W < 768 ) { 
+				$(".leftListArea").slideToggle();
+			}
+		});
+	});
+	
+	$(window).resize(function(e) {
+		var win_W			= $(window).width();			//螢幕寬度
+		if ( win_W > 768 ) {
+			$(".leftListArea").removeAttr("style");
+		}
+	});
+	
+
+	//----------------------------------主按鍵收合----------------------------------
+	$(function(){
+		$(".nav").children("a").click(function(e) {
+			$(this).siblings(".navOpen").slideToggle("fast");
+			$(".nav").children("a").not(this).siblings(".navOpen").slideUp("fast");
+            
+			e.stopPropagation();
+        });
+		
+		
+		$(".navOpen").click(function(e) {
+            e.stopPropagation();
+        });
+		
+		$(window).click(function(e) {
+            $(".navOpen").slideUp("fast");
+        });
+	});
+	
+	//----------------------------------手機版主按鍵收合----------------------------------
+	$(function(){
+		$(".menu_btn").click(function(e) {
+            $(this).toggleClass("active");
+			$(".navbar").toggleClass("active");
+			$("body").toggleClass("active");
+			e.stopPropagation();
+			
+			$(".navOpen").hide();
+			$(".navOpenList").children("a").removeClass("active");
+			$(".navOpen_second, .m_navOpen_second").removeClass("show");
+        });
+		
+		$(window).resize(function(e) {
+			var win_W		 = $(window).width();			//螢幕寬度
+            if ( win_W > 768 ) {
+				$(".navbar").removeClass("active");
+				$("body").removeClass("active");
+				$(".menu_btn").removeClass("active");
+				
+				$(".navOpen").hide();
+				$(".navOpenList").children("a").removeClass("active");
+				$(".navOpen_second, .m_navOpen_second").removeClass("show");
+			}
+        });
+		
+		$(".navbar").click(function(e) {
+            e.stopPropagation();
+        });
+		
+		$(window).click(function(e) {
+            $(".navbar").removeClass("active");
+			$("body").removeClass("active");
+			$(".menu_btn").removeClass("active");
+        });
+	});
+	
+	
+	
+	//----------------------------------左選單收合----------------------------------
+	$(function(){
+		$(".leftList").children("a").click(function(e) {
+			$(".leftList").children("a").not(this).siblings(".leftList_open").slideUp();
+            $(this).siblings(".leftList_open").slideToggle();
+        });
+	});	
+	//----------------------------------手機板左選單收合----------------------------------
+	$(function(){
+		
+		$(".leftList_tit").click(function(e) {		
+			if ( $(window).width() <= 990 ) { // Eric修改-手機版時才有收合效果 850隨每個案子修改
+				$(this).toggleClass("active");
+				$(".leftListArea").slideToggle("slow");
+				
+				$("body").toggleClass("active");
+            }
+			e.stopPropagation();
+        });
+		
+        // Eric 20180314 返回pc時 左選單選單回覆展開狀態
+       	$(window).resize(function(e) {
+			if ( $(window).width() > 990 ) { //  850隨每個案子修改
+				$(".leftList_tit").removeClass("active");
+				$(".leftListArea").show();
+				$("body").removeClass("active");
+			}
+			
+			if ( $(window).width() <= 990 ) { // Eric修改-手機版時才有收合效果 850隨每個案子修改
+				/*$(this).toggleClass("active");*/
+				/*$(".leftListArea").slideToggle("slow");*/
+				$(".leftListArea").hide();
+				/*$("body").toggleClass("active");*/
+            }
+			e.stopPropagation();
+     	});
+	
+	});	
+	
+	
+	
+	
+	
+$(function(){
+});

@@ -1,0 +1,77 @@
+﻿/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 10px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/*  border: 1px solid #ccc;
+*/
+.col-sm-8 {
+    margin: 5px;
+    float: left;
+    width: 600px;
+}
+
+    .col-sm-8 img {
+        width: 100%;
+        height: auto;
+    }
+
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.panel {
+    border: 1px solid #474e5d;
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+
+    .panel:hover {
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+
+.panel-footer .btn:hover {
+    border: 1px solid #474e5d;
+    background-color: #fff !important;
+    color: #474e5d;
+}
+
+.panel-heading {
+    color: #fff !important;
+    background-color: #474e5d !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #474e5d;
+    color: #fff;
+}

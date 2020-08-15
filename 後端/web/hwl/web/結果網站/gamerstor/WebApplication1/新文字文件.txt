@@ -1,0 +1,29 @@
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (1, N'Blood: Fresh Supply?                    ', CAST(186.0000 AS Money), N'Nightdive Studios             ', N'2017-01-20', N'MUD                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (2, N'Yakuza Kiwami 2                         ', CAST(890.0000 AS Money), N'SEGA                          ', N'2018-01-20', N'ACT                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (3, N'Sekiro?: Shadows Die Twice              ', CAST(1590.0000 AS Money), N'Activision                    ', N'2018-01-20', N'ACT                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (4, N'PLAYERUNKNOWN''S BATTLEGROUNDS           ', CAST(799.0000 AS Money), N'
+PUBG Corporation             ', N'2018-01-20', N'MUD                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (5, N'Tom Clancy''s Rainbow SixR Siege         ', CAST(540.0000 AS Money), N'Ubisoft                       ', N'2018-01-20', N'MUD                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (6, N'Github                                  ', CAST(450.0000 AS Money), N'none                          ', N'2018-01-20', N'none                ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (7, N'PAYDAY 2                                ', CAST(93.0000 AS Money), N'
+Starbreeze Publishing AB    ', N'2018-01-20', N'MUD                 ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (8, N'Battle Brothers                         ', CAST(344.0000 AS Money), N'
+Overhype Studios            ', N'2018-01-20', N'ASLG                ')
+INSERT INTO [dbo].[商品] ([Id], [名稱], [價格], [發行商], [發行日期], [類型]) VALUES (9, N'Stellaris                               ', CAST(174.0000 AS Money), N'
+Paradox Interactive         ', N'2018-01-20', N'ASLG                ')
+
+
+
+1	Blood: Fresh Supply?                    	186.0000	Nightdive Studios             	2017/1/20	MUD                 
+2	Yakuza Kiwami 2                         	890.0000	SEGA                          	2018/1/20	ACT                 
+3	Sekiro?: Shadows Die Twice              	1590.0000	Activision                    	2018/1/20	ACT                 
+4	PLAYERUNKNOWN'S BATTLEGROUNDS           	799.0000	
+PUBG Corporation             	2018/1/20	MUD                 
+5	Tom Clancy's Rainbow SixR Siege         	540.0000	Ubisoft                       	2018/1/20	MUD                 
+6	Github                                  	450.0000	none                          	2018/1/20	none                
+7	PAYDAY 2                                	93.0000	
+Starbreeze Publishing AB    	2018/1/20	MUD                 
+8	Battle Brothers                         	344.0000	
+Overhype Studios            	2018/1/20	ASLG                
+9	Stellaris                               	174.0000	
+Paradox Interactive         	2018/1/20	ASLG                

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/ xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jQuery/jquery-1.6.4.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+    $("p,div").css({"margin":"0","padding":"0.5em"});   	//比對所有的div和p元素，統一顯示間距
+    $("div").css("border", "solid 2px red");   			//控制文件中所有div元素
+$("div > div").css("margin", "1em");		//控制div元素包含的div子元素，實際上它與div包含選擇器所
+符合的元素是相同的
+    $("div div").css("background", "#ff0");		//控制最外層div元素包含的所有div元素
+    $("div div div").css("background", "#f0f"); 	//控制第3層及其以內的div元素
+    $("div + p").css("margin", "1em");		//控制div相鄰的p元素
+    $("div:eq(1) ~ p").css({"background":"blue","color":"white"}); //控制div後面並列的所有p元素
+})
+</script>
+<title>上機練習</title>
+</head>
+<body>
+<h1>青玉案 — 元夕</h1>
+<h2>辛棄疾</h2>
+<div>
+    <div>東風夜放花千樹，
+        <div>更吹落，星如雨。</div>
+        <p>寶馬雕車香滿路。</p>
+        <p>鳳簫聲動，玉壺光轉，</p>
+        <p>一夜魚龍舞。</p>
+    </div>
+    <p>蛾兒雪柳黃金縷，</p>
+    <p>笑語盈盈暗香去。</p>
+    <p>眾裡尋他千百度，</p>
+</div>
+<p>驀然回首，那人卻在，</p>
+<p>燈火闌珊處。</p>
+</body>
+</html>

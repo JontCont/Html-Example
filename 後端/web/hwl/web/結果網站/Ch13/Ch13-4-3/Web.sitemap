@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="首頁">
+        <siteMapNode url="~/Login.aspx" title="Login"/>
+        <siteMapNode url="~/PasswordRecovery.aspx" title="PasswordRecovery"/>
+        <siteMapNode url="~/ChangePassword.aspx" title="ChangePassword"/>
+        <siteMapNode url="~/CreateUserWizard.aspx" title="CreateUserWizard"/>
+        <siteMapNode url="~/Member/Default.aspx" title="Member/首頁"/>
+        <siteMapNode url="~/Admin/Default.aspx" title="Admin/首頁"/>
+    </siteMapNode>
+</siteMap>
