@@ -4,7 +4,7 @@ var dY,
 $win.scroll(function () {
     var $this = $(this);
     dY = $(this).scrollTop();
-
+    console.log($this.height());
     if (dY > $('#Js .ani-fadeIn-up').offset().top - $this.height() / 2) {
         $('#Js .ani-fadeIn-up').addClass('js-ani-fadeIn-up');
     } else {

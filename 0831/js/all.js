@@ -6,27 +6,30 @@ function toggleMenu() {
 }
 
 var dY,
-    $win = $(window),
-    aniArr = ['ani-fadeIn-right', 'ani-fadeIn-right', 'ani-fadeIn-right'];
-
-$('.ani-fadeIn-up').eq(0).addClass('js-' + aniArr[0]);
-$('.ani-fadeIn-left').eq(0).addClass('js-' + aniArr[1]);
-$('.ani-fadeIn-right').eq(0).addClass('js-' + aniArr[2]);
+    $win = $(window);
 
 $win.scroll(function () {
     var $this = $(this);
     dY = $(this).scrollTop();
 
-    for (var i = 0, aniArrLen = aniArr.length; i < aniArrLen; i++) {
-        var items = $('.' + aniArr[i]);
-        for (var j = 1, itemLen = items.length; j < itemLen; j++) {
-            var $item = $(items[j]);
-            if (dY > $item.offset().top - $this.height() / 2) {
-                $item.addClass('js-' + aniArr[i]);
-            } else {
-                $item.removeClass('js-' + aniArr[i]);
-            }
+    var items = $('.ani-fadeIn-up');
+    console.log(dY);
+    for (var i = 0, len = items.length; i < len; i++) {
+        var $item = $(items[i]);
+        if (dY > $item.offset().top - $this.height() / 2) {
+            $item.addClass('js-ani-fadeIn-up');
+        } else {
+            $item.removeClass('js-ani-fadeIn-up');
         }
     }
-
+    
+    var items = $('.ani-fadeIn-left');
+    for (var i = 0, len = items.length; i < len; i++) {
+        var $item = $(items[i]);
+        if (dY > $item.offset().top - $this.height() / 2) {
+            $item.addClass('js-ani-fadeIn-left');
+        } else {
+            $item.removeClass('js-ani-fadeIn-left');
+        }
+    }
 });
