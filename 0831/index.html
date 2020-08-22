@@ -5,22 +5,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>部落格 首頁 - 學東學西學不完</title>
+    <title>Jcont 首頁 - 學東學西學不完</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.css">
+    <script src="js/all.js"></script>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="head__inner">
-            <div class="head__item content_center">
-                <h1 class="title_1">JCont - 部落格Blog </h1>
-                <p class="content_p">*學程式語言，學東學西學不完* </p>
-                <button class="btn_home" onclick="javascript:location.href='home.html'">Home</button>            </div>
-            <video class="head_video" autoplay loop muted src="video/Pexels Videos 1448735.mp4" type="video/mp4"></video>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="Porhome.html">作品集</a></li>
+                <li><a href="javascript:;">聯絡我</a></li>
+            </ul>
         </div>
-        <div  style="height: 100vh; background-color: gray;"></div>
-        <div style="height: 100vh;"></div>
+        <div class="header__inner">
+            <div class="header__item">
+                <h2 class="logo"><span>JCont</span></h2>
+                <div class="toggle" onclick="toggleMenu();"></div>
+            </div>
+            <video src="video/Pexels Videos 1672800.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="text">
+                <h2>JC部落格</h2>
+                <h3>persevere until the end</h3>
+                <p>人生如同故事。重要的並不在有多長，而是在有多好，由智慧養成的習慣，能成為第二天性。
+                </p>
+                <a href="home.html">進入首頁</a>
+            </div>
+            <ul class="sci ">
+                <li>
+                    <a href="javascript:; "><img src="images/facebook.png " alt="facebook "></a>
+                </li>
+                <li>
+                    <a href="javascript:; "><img src="images/twitter.png " alt="twitter "></a>
+                </li>
+                <li>
+                    <a href="javascript:; "><img src="images/instagram.png " alt="instagram "></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 
