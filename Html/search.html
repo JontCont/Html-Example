@@ -10,12 +10,12 @@
 (function(document) {
   'use strict';
 
-  // «Ø¥ß LightTableFilter
+  // å»ºç«‹ LightTableFilter
   var LightTableFilter = (function(Arr) {
 
     var _input;
 
-    // ¸ê®Æ¿é¤J¨Æ¥ó³B²z¨ç¼Æ
+    // è³‡æ–™è¼¸å…¥äº‹ä»¶è™•ç†å‡½æ•¸
     function _onInputEvent(e) {
       _input = e.target;
       var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
@@ -26,14 +26,14 @@
       });
     }
 
-    // ¸ê®Æ¿z¿ï¨ç¼Æ¡AÅã¥Ü¥]§tÃöÁä¦rªº¦C¡A¨ä¾lÁôÂÃ
+    // è³‡æ–™ç¯©é¸å‡½æ•¸ï¼Œé¡¯ç¤ºåŒ…å«é—œéµå­—çš„åˆ—ï¼Œå…¶é¤˜éš±è—
     function _filter(row) {
       var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
       row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
     }
 
     return {
-      // ªì©l¤Æ¨ç¼Æ
+      // åˆå§‹åŒ–å‡½æ•¸
       init: function() {
         var inputs = document.getElementsByClassName('light-table-filter');
         Arr.forEach.call(inputs, function(input) {
@@ -43,7 +43,7 @@
     };
   })(Array.prototype);
 
-  // ºô­¶¸ü¤J§¹¦¨«á¡A±Ò°Ê LightTableFilter
+  // ç¶²é è¼‰å…¥å®Œæˆå¾Œï¼Œå•Ÿå‹• LightTableFilter
   document.addEventListener('readystatechange', function() {
     if (document.readyState === 'complete') {
       LightTableFilter.init();
@@ -53,30 +53,30 @@
 })(document);
 </script>
 <body>
-    <p>·j´M¡G<input type="search" class="light-table-filter" data-table="order-table" placeholder="½Ğ¿é¤JÃöÁä¦r"></p>
+    <p>æœå°‹ï¼š<input type="search" class="light-table-filter" data-table="order-table" placeholder="è«‹è¼¸å…¥é—œéµå­—"></p>
 
 <table class="order-table" border="2">
   <thead>
     <tr>
-      <th>©m¦W</th>
-      <th>¹q¸Ü</th>
+      <th>å§“å</th>
+      <th>é›»è©±</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>¥Oª°¨R</td>
+      <td>ä»¤ç‹æ²–</td>
       <td>0928-123456</td>
     </tr>
     <tr>
-      <td>©¨¤£¸s</td>
+      <td>å²³ä¸ç¾¤</td>
       <td>0928-654321</td>
     </tr>
     <tr>
-      <td>©¨ÆF¬À</td>
+      <td>å²³éˆçŠ</td>
       <td>0928-888999</td>
     </tr>
     <tr>
-      <td>¿W©t¨D±Ñ</td>
+      <td>ç¨å­¤æ±‚æ•—</td>
       <td>0975-938374</td>
     </tr>
   </tbody>

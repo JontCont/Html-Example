@@ -1,0 +1,19 @@
+.nav-li a,.logo{
+    color: #fff;
+}
+.logo{
+    font-size:35px;
+    margin-left: 15px;
+}
+.nav-li a{
+    display: inline-block;
+    padding:  5px 25px;
+}
+
+/* for JS */
+.js-ani-fadeIn-up,
+.js-ani-fadeIn-down,
+.js-ani-fadeIn-left,
+.js-ani-fadeIn-right{ transform: translate(0); opacity: 1;}
+
+
