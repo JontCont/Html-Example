@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O 資料</title>
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+    <form action="/table.html" method="GET">
+        <div class="wrap">
+            <div class="head__title">
+                <h2 class="title__h2">開發評估 Part 1/4</h2>
+            </div>
+            <div class="body__content">
+                <div class="content__inner">
+                    <div class="content__item ">
+                        <ul class="ul_content part_set">
+                            <li class="pro_01">
+                                <label for="pro_app" id="pro_app" class="pro_app">產品應用</label>
+                                <select name="pro_app" id="data_pro_app" ></select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_type">產品類別</label>
+                                <select name="pro_type" id="data_pro_type" class="data_pro_type"></select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_material">產品材質</label>
+                                <select name="pro_material" id="data_pro_material" class="data_pro_material"></select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_color">產品顏色</label>
+                                <select name="pro_color" id="data_pro_color" class="data_pro_color"></select>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="fun_requir">功能需求</label>
+                                    <div class="fun_requir_area area">
+                                        <input type="checkbox" name="" value="">N/A
+                                        <input type="checkbox" name="" value="">需導電
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="oth_requir">外觀需求</label>
+                                    <div class="oth_requir_area area">
+                                        <input type="checkbox" name="" value="">N/A
+                                        <input type="checkbox" name="" value="">有LOGO
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="rule">法規限制</label>
+                                    <div class="rule_area area">
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ul_content">
+                            <li class="pro_01">
+                                <label for="predict">預計訂購量/月</label>
+                                <input type="date" name="area" id="area">
+                            </li>
+                            <li class="pro_01">
+                                <label for="area">出貨地區</label>
+                                <input type="text" name="area" id="area" class="area">
+                                <div class="meun_style">
+                                    <label for="">未選擇</label>
+                                    <ul class="navi-list" style="display: none;">
+                                        <li class="part_A1"><span>A1</span>
+                                            <ul style="display: none;">
+                                                <li class="part_AA1"><span>AA1</span>
+                                                    <ul style="display: none;">
+                                                        <li class="part_AAA1"><span>AAA1</span></li>
+                                                        <li class="part_AAA2"><span>AAA2</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="part_AA2"><span>AA2</span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="part_A2"><span>A2</span></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="pro_01">
+                                <label for="term">貿易條件</label>
+                                <select name="pro_app" id="data_pro_app" class="data_pro_app">
+                                    <option value="">EXW</option>
+                                    <option value="">FOB</option>
+                                    <option value="">CFR</option>
+                                    <option value="">CIF</option>
+                                    <option value="">DDU</option>
+                                    <option value="">DDP</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul class="ul_content">
+                            <li class="pro_01">
+                                <label for="Spec_materials">客戶指定用料</label>
+                                <input type="text" name="Spec_materials" id="Spec_materials" class="Spec_materials">
+                            </li>
+                            <li class="pro_01">
+                                <label for="material_charact">材料特性</label>
+                                <input type="text" name="material_charact" id="material_charact" class="material_charact">
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_thickness">原料厚度</label>
+                                <input type="text" name="pro_thickness" id="pro_thickness" class="pro_thickness">
+                            </li>
+                            <li class="pro_01">
+                                <label for="print_image">印刷圖檔</label>
+                                <input type="text" name="print_image" id="print_image">
+                            </li>
+                            <li class="pro_01">
+                                <label for="fit">貼合</label>
+                                <input type="text" name="fit" id="fit">
+                            </li>
+                            <li class="pro_01">
+                                <label for="rang">公差範圍</label>
+                                <input type="text" name="rang" id="rang">
+                            </li>
+                        </ul>
+                        <ul class="ul_content">
+                            <li class="pro_01">
+                                <label for="oth_rule">外觀規格</label>
+                                <input type="text" name="oth_rule" id="oth_rule">
+                            </li>
+                            <li class="pro_01">
+                                <label for="oth_tolerance">外觀公差</label>
+                                <input type="text" name="oth_tolerance" id="oth_tolerance">
+                            </li>
+                            <li class="pro_01">
+                                <label for="print_w">印刷_W</label>
+                                <input type="text" name="print_w" id="print_w">
+                            </li>
+                            <li class="pro_01">
+                                <label for="print_h">印刷_H</label>
+                                <input type="text" name="print_h" id="print_h">
+                            </li>
+                        </ul>
+                        <ul class="ul_content">
+                            <li class="pro_01">
+                                <label for="">8 Slot</label>
+                                <input type="text" name="" id="">
+                            </li>
+                            <li class="pro_01">
+                                <label for="">金手指寬</label>
+                                <input type="text" name="" id="">
+                            </li>
+                            <li class="pro_01">
+                                <label for="">外型_W</label>
+                                <input type="text" name="" id="">
+                            </li>
+                            <li class="pro_01">
+                                <label for="">外型_H</label>
+                                <input type="text" name="" id="">
+                            </li>
+                            <li class="pro_01">
+                                <label for="">定位孔_D</label>
+                                <input type="text" name="" id="">
+                            </li>
+                            <li class="pro_01">
+                                <label for="">公差範圍</label>
+                                <input type="text" name="" id="">
+                            </li>
+                        </ul>
+                        <div class="btn_body">
+                            <button type="button" class="next__btn">下一步</button>
+                            <button type="button" class="Previous__btn">上一步</button>
+                            <button type="submit" class="save_btn">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/all.js"></script>
+</body>
+
+</html>

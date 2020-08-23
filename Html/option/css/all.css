@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/* toolt */
+
+.pro_01 {
+    margin: 20px;
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+.btn_body {
+    top: 20px;
+}
+
+select {
+    width: 100px;
+}
+
+.ul_content {
+    display: none;
+}
+
+.part_set {
+    display: block;
+}
+
+
+/* basic */
+
+.wrap {}
+
+.head__title {}
+
+.content__inner {
+    display: grid;
+    position: relative;
+    height: 500px;
+}
+
+.content__item,
+.btn_body {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    height: auto;
+}
+
+.pro_01>label {
+    margin-right: 30px;
+    float: left;
+}
+
+.pro_01>input {
+    margin-right: 25px;
+}
+
+.btn_body>button {
+    margin-left: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+.btn_body>.next__btn {
+    margin-left: 25%;
+}
+
+.area {
+    width: 100%;
+}
+.meun_style>label,
+.meun_style{
+    cursor: pointer    ;
+}
+.meun_style{
+    margin-top: 10px;
+    width: 20%;
+    height: 10%;
+    border: 1px solid #000;
+    background-color: #ccc;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O 資料</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      var UrlStr = decodeURIComponent(window.location.search).substring(1);
+      var queries = UrlStr.split("&");
+      var splitstr =new Array;
+      var title="",ans="";
+      for (var i = 0; i < 8; i++)
+      {
+        splitstr =queries[i].split('=');
+        title+='<th scope="col">'+splitstr[0]+'</th>';
+        ans+='<td scope="col">'+splitstr[1]+'</td>'
+        // document.write(queries[i] + "<br>");
+    }
+    $('thead>tr').html(title);
+    $('tbody>tr').html(ans);
+</script>
+</body>
+
+
+</html>

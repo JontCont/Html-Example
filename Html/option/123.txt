@@ -1,0 +1,76 @@
+                            <li class="pro_01">
+                                <label for="pro_app" id="pro_app" class="pro_app">產品應用</label>
+                                <select name="pro_app" id="data_pro_app" class="data_pro_app">
+                                    <option value="">N/A</option>
+                                    <option value="">醫療產品</option>
+                                    <option value="">電子產品</option>
+                                    <option value="">車用</option>
+                                    <option value="">一般</option>
+                                </select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_type">產品類別</label>
+                                <select name="pro_type" id="data_pro_type" class="data_pro_type">
+                                        <option value="">LAYER 1</option>
+                                        <option value="">LAYER 2</option>
+                                        <option value="">LAYER 3</option>
+                                        <option value="">LAYER 4</option>
+                                        <option value="">LAYER 5</option>
+                                    </select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_material">產品材質</label>
+                                <select name="pro_material" id="data_pro_material" class="data_pro_material">
+                                        <option value="">N/A</option>
+                                        <option value="">PET</option>
+                                        <option value="">PVC</option>
+                                    </select>
+                            </li>
+                            <li class="pro_01">
+                                <label for="pro_color">產品顏色</label>
+                                <select name="pro_color" id="data_pro_color" class="data_pro_color">
+                                        <option value="">N/A</option>
+                                        <option value="">透明</option>
+                                        <option value="">白色</option>
+                                    </select>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="fun_requir">功能需求</label>
+                                    <div class="fun_requir_area area">
+                                        <input type="checkbox" name="" value="">N/A
+                                        <input type="checkbox" name="" value="">需導電
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="oth_requir">外觀需求</label>
+                                    <div class="oth_requir_area area">
+                                        <input type="checkbox" name="" value="">N/A
+                                        <input type="checkbox" name="" value="">有LOGO
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro_01">
+                                <div class="checkbox_body">
+                                    <label for="rule">法規限制</label>
+                                    <div class="rule_area area">
+                                        <input type="checkbox" name="" value="">RoHS
+                                        <input type="checkbox" name="" value="">REACH
+                                        <input type="checkbox" name="" value="">CE
+                                        <input type="checkbox" name="" value="">UL
+                                        <input type="checkbox" name="" value="">FCC
+                                    </div>
+                                </div>
+                            </li>
