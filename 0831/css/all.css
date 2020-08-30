@@ -15,6 +15,11 @@
 }
 
 /* Tools */
+.mx-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .content_center {
     position: relative;
     /* 絕對 */
@@ -40,7 +45,16 @@
     line-height: 1em;
     text-transform: uppercase;
 }
-
+.page-title {
+    margin-top: 50px;
+    margin-bottom:20px;
+    text-align: center;
+    font-size:4em;
+}
+.page-title-left {
+    margin-bottom:20px;
+    font-size:4em;
+}
 .txt_content {
     padding: 5px 10px;
     font-size: 4em;
@@ -48,12 +62,24 @@
     line-height: 1em;
     text-transform: uppercase;
 }
+.nav-li a,.logo{
+    color: #fff;
+}
+.nav-li a{
+    display: inline-block;
+    padding:  5px 25px;
+}
+
 /* Public nav */
 .logo {
     float:left;
     text-transform: uppercase;
     cursor: pointer;
+    font-size:35px;
+    margin-left: 15px;
 }
+
+
 .header__inner {
     right: 0;
     transition: 1.5s;
@@ -92,13 +118,24 @@
 }
 
 .btn{
-    position:absolute;
     padding: 15px 30px;
     margin: 10px;
 }
-.btn-security{
+.btn__item{
+    margin-left: 75px;
+}
+.btn__about{
+    display: block;
+}
+.btn__blog{    
+    display: block;
+}
+.btn__about--security,
+.btn__blog--security{
     background-color: rgb(76, 195, 76);
     color: #eee;
+    display: inline-block;
+    left: 5%;
 }
 .btn-login{
     font-size: 1.2em;
@@ -184,9 +221,7 @@
 .page-content{
     padding-top: 70px;
     width:1200px;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
 }
 .card {
     width: 25%;

@@ -1,14 +1,4 @@
-.nav-li a,.logo{
-    color: #fff;
-}
-.logo{
-    font-size:35px;
-    margin-left: 15px;
-}
-.nav-li a{
-    display: inline-block;
-    padding:  5px 25px;
-}
+
 .image-resp{
     position: absolute;
     width: 500px;
@@ -18,7 +8,7 @@
 
 .page__body:nth-child(2){
     background-color: #008dff;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 98.4%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 98.4%);
     color:#fff
 }
 .page__body:nth-child(3){
@@ -52,7 +42,7 @@
 .base__head { margin-bottom: 5rem; text-align: center;}
 .base__body { display: flex; align-items: center;height: 65vh;}
 .base__title { font-size: 2.5rem;}
-.base__desc { font-size: 1.5em; line-height: 1.7; margin-bottom: 1rem; width: 50%;position: absolute;bottom: 0;padding: 20px 50px ;}
+.base__desc { font-size: 1.5em; line-height: 1.7; margin-bottom: 1rem; width: 50%;position: absolute;bottom:10%;padding: 20px 50px ;}
 .base__intro, .base__body .img__inner { padding: 20px;}
 .base__intro{  height: 50vh;}
 .base__body .img__inner{ width: 100%;}
@@ -62,4 +52,34 @@
 .js-ani-fadeIn-left,
 .js-ani-fadeIn-right{ transform: translate(0); opacity: 1;}
 
+/* page -4 */
+.mask { overflow: hidden;}
+.img-resp{ width: 100%; height: auto; display: block;}
+.slide { position: relative; width: 700px; margin: 2em auto; box-shadow:10px 10px #222;}
+.slide .img__inner { position: relative; left: 0; display: flex; transition: left .3s ease;}
 
+.slide .pagination {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.pagination__item {
+    padding: 3px 7px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.pagination__item:hover {
+    background-color: #fff;
+}
+
+.js-pagination__item,
+.js-pagination__item:hover {
+    color: #000;
+    background-color: orange;
+}
