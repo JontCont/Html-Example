@@ -8,15 +8,13 @@
     margin: 0;
     padding: 0;
 }
-
-
-/* Tools */
-
-.content_p {
+/* font set */
+.content-desc {
     font-size: 30px;
     color: #ffffff;
 }
 
+/* Tools */
 .content_center {
     position: relative;
     /* 絕對 */
@@ -29,47 +27,12 @@
     display: grid;
 }
 
-.other {
-    position: absolute;
-    display: block;
-    height: 100vh;
-}
-
 .txt__desc{
     position: relative;
     font-size: 1.5em;
     margin: 20px 0;
     font-weight: 400;
     letter-spacing: 2px;
-}
-
-/* model */
-.logo {
-    float:left;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.header__inner {
-    right: 0;
-    transition: 1.5s;
-}
-
-.center-flex{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.center-content{
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
 }
 .txt_title {
     font-size: 6em;
@@ -85,6 +48,40 @@
     line-height: 1em;
     text-transform: uppercase;
 }
+/* Public nav */
+.logo {
+    float:left;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header__inner {
+    right: 0;
+    transition: 1.5s;
+}
+.center-content{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.center-flex{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* model */
+.base-body{
+    position: relative;
+    padding-top:93px;
+}
+
+
 
 .btn-white{
     text-decoration: none;
@@ -105,9 +102,8 @@
 }
 .btn-login{
     font-size: 1.2em;
-    bottom: 25%;
-    left: 20px;
     z-index: 1;
+    margin : 20px 50px;
 }
 .sci {
     position: absolute;
