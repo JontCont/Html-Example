@@ -74,3 +74,24 @@ function setSlide() {
 	$paginationItem.eq(index).addClass('js-pagination__item')
 		.siblings().removeClass('js-pagination__item');
 }
+
+$('#Btn_01').click(function () {
+    var dY = $('.page__body:nth-child(2)').offset().top;
+    setPos(dY);
+});
+$('#Btn_02').click(function () {
+    var dY = $('.page__body:nth-child(3)').offset().top;
+    setPos(dY);
+});
+$('#Btn_03').click(function () {
+    var dY = $('.page__body:nth-child(4)').offset().top;
+    setPos(dY);
+});
+$('#Btn_04').click(function () {
+    var dY = $('.page__body:nth-child(5)').offset().top;
+    setPos(dY);
+});
+
+function setPos(y){
+    $('html').stop(true, false).animate({ scrollTop: y }, 900);
+}
