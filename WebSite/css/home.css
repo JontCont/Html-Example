@@ -4,6 +4,7 @@
     width: 500px;
     height: auto;
     right: 5%;
+    top: 50px;
 }
 
 .page__body:nth-child(2){
@@ -12,13 +13,19 @@
     color:#fff
 }
 .page__body:nth-child(3){
+    background-color: #fff;
     color:#000;
 }
 
 .page__body:nth-child(4){
     background-color: #008dff;
+    color:#fff
+
 }
 .page__body:nth-child(5){
+    background-color: #fff;
+    color:#000;
+
 }
 
 .page__content{
@@ -50,7 +57,6 @@
 .js-ani-fadeIn-up,
 .js-ani-fadeIn-down,
 .js-ani-fadeIn-left,
-.js-ani-fadeIn-right{ transform: translate(0); opacity: 1;}
 
 /* page -4 */
 .mask { overflow: hidden;}
