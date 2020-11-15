@@ -89,3 +89,17 @@
     color: #000;
     background-color: orange;
 }
+
+.ico-inner{
+    background-color: #008dff;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#fff;
+}
+.ico-desc{
+    margin-top: 20px;
+    font-size:45px;
+    color:#fff;
+}
