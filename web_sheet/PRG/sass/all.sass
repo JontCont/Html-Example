@@ -1,0 +1,113 @@
+$color-login-right : rgb(20, 138, 228)
+$color-login-left : rgb(253, 223, 88)  
+$color-white : #fff
+$color-gray : #444
+$color-hover : rgb(25, 100, 158)
+
+*
+    margin: 0 
+    padding: 0
+    box-sizing: border-box
+    font-family: Arial, Helvetica,微軟正黑體 ,sans-serif
+
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+    background: $color-login-right
+    
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 100%
+        background: $color-login-left
+        
+    .login__card //登入內容區塊
+        position: relative
+        display: flex
+        min-width: 1100px
+        min-height: 550px
+        z-index: 1000
+
+    .login__Form //登入內容input FORM的區塊
+        // position: absolute
+        position: absolute
+        // padding: 70px 50px
+        // padding-left: 250px
+        padding-left: 0
+        padding: 40px
+        margin-left: 150px
+        // margin-left: 0
+        width: calc( 100% - 250px )
+        height: 550px
+        background: $color-white
+        border-radius: 8px
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25)
+
+    .ctr__title //標題
+        font-size: 30px
+        font-weight: 700
+        color: $color-gray
+        width: 250px
+        border-bottom: 5px solid $color-login-left
+       
+    .formBox
+        position: relative
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        padding-top: 30px
+        .w50
+            width: 60%
+        .w100
+            width: 100%
+
+        .inutBox
+            position: relative
+            margin-bottom: 35px
+            margin-top: 10px
+            input:focus ~ span ,textarea:focus ~ span,
+            input:valid ~ span ,textarea:valid ~ span
+                transform: translateY(-20px) 
+                font-size: 15px
+                font-weight: 500
+                letter-spacing: 1px
+                color: $color-gray
+                font-weight: 500
+
+            input[type='submit'],input[type='button']
+                position: relative
+                cursor: pointer
+                border: none
+                max-width: 150px
+                padding: 12px
+                background: $color-login-right
+                color: $color-white
+                &:hover
+                    background: $color-hover
+            span
+                position: absolute
+                left: 0
+                padding: 5px 0
+                pointer-events: none
+                font-size: 25px
+                font-weight: 600
+                transition: 0.3s
+
+            textarea
+                height: 120px
+
+            input,textarea
+                width: 100%
+                padding: 10px 0
+                font-size: 18px
+                font-weight: 500
+                color: $color-gray
+                border: none
+                outline: none
+                border-bottom: 2px solid #777
+        
